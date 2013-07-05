@@ -1,14 +1,36 @@
 <!doctype html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="flightApp">
 <head>
     <meta charset="utf-8">
     <title>AngularJS Flights</title>
     <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-<div class="container" ng-controller="FlightCtrl">
-  <h1>Flights {{ flight.number }}</h1>
-  <input type="text" ng-model="flight.number" autofocus>
+<div class="container-fluid">
+    <div ng-controller="FilterCtrl">
+        <h1>Flights {{ flight.number }}</h1>
+        <input type="text" ng-model="flight.number" autofocus>
+    </div>
+    <div ng-controller="FlightListCtrl">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Flight Number</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Departure</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ flight.number }}</td>
+                <td>{{ flight.origin }}</td>
+                <td>{{ flight.destination }}</td>
+                <td>{{ flight.departure }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <script type="text/javascript" src="angular.min.js"></script>
