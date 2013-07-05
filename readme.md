@@ -3,7 +3,7 @@
 1. Binding and Expressions
 2. Controllers
 3. Adding Javascript OOP
-3. Services
+4. Services
 
 ## Resources
 

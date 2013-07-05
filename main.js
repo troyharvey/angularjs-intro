@@ -5,6 +5,10 @@ flightApp.factory('FlightService', function() {
 
 function FilterCtrl($scope, FlightService) {
   $scope.flight = FlightService;
+
+  $scope.idOnly = function(flightNumber) {
+    return flightNumber.substr(3, 4);
+  };
 }
 
 function FlightListCtrl($scope, FlightService) {
