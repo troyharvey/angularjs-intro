@@ -4,6 +4,9 @@
 2. Controllers
 3. Adding Javascript OOP
 4. Services
+5. [date Filter](http://docs.angularjs.org/api/ng.filter:date)
+6. `ng-repeat` Directive
+7.
 
 ## Resources
 

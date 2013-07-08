@@ -1,6 +1,6 @@
-var Flight = function () {
-    this.number = 'UPS1234';
-    this.origin = 'SDF';
-    this.destination = 'CGN';
-    this.departure = Date();
+var Flight = function (nr, og, dt, dp) {
+    this.number = nr;
+    this.origin = og;
+    this.destination = dt;
+    this.departure = dp;
 };

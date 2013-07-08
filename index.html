@@ -8,8 +8,8 @@
 <body>
 <div class="container-fluid">
     <div ng-controller="FilterCtrl">
-        <h1>Flights {{ idOnly(flight.number) }}</h1>
-        <input type="text" ng-model="flight.number" autofocus>
+        <h1>Flights</h1>
+        <input type="text" ng-model="filteringBy" autofocus>
     </div>
     <div ng-controller="FlightListCtrl">
         <table class="table">
@@ -22,11 +22,11 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr ng-repeat="flight in flights">
                 <td>{{ flight.number }}</td>
                 <td>{{ flight.origin }}</td>
                 <td>{{ flight.destination }}</td>
-                <td>{{ flight.departure }}</td>
+                <td>{{ flight.departure | date:'HH:mm' }}</td>
             </tr>
             </tbody>
         </table>
