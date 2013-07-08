@@ -7,11 +7,12 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div ng-controller="FilterCtrl">
-        <h1>Flights</h1>
-        <input type="text" ng-model="filteringBy" autofocus>
-    </div>
     <div ng-controller="FlightListCtrl">
+        <h1>Flights</h1>
+        <input type="text" ng-model="filteringBy.$" autofocus>
+        <label>
+            <input type="checkbox" ng-model="sdfOnly"> SDF only
+        </label>
         <table class="table">
             <thead>
             <tr>
@@ -22,7 +23,8 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="flight in flights">
+            <tr ng-repeat="flight in flightService.flights | filter:filteringBy | orderBy: 'departure'"
+                    ng-hide="sdfOnly && flight.origin != 'SDF'">
                 <td>{{ flight.number }}</td>
                 <td>{{ flight.origin }}</td>
                 <td>{{ flight.destination }}</td>

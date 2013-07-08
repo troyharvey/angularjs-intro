@@ -6,7 +6,8 @@
 4. Services
 5. [date Filter](http://docs.angularjs.org/api/ng.filter:date)
 6. `ng-repeat` Directive
-7.
+7. Built-in Filters [orderBy](http://docs.angularjs.org/api/ng.filter:orderBy)
+8. `ng-hide` Directive
 
 ## Resources
 
