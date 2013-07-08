@@ -1,4 +1,5 @@
 var flightApp = angular.module('flightApp', []);
+
 flightApp.factory('FlightService', function() {
   service = {
     filteringBy: null,
@@ -23,6 +24,14 @@ flightApp.factory('FlightService', function() {
     ]
   };
   return service;
+});
+
+flightApp.directive("map", function($window) {
+  return function (scope, element) {
+    element.bind('click', function() {
+      $window.location.href = "https://maps.google.com/maps?q=" + this.innerText + "+airport&hl=en";
+    });
+  }
 });
 
 function FlightListCtrl($scope, FlightService) {

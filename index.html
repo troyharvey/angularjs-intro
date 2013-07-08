@@ -26,7 +26,7 @@
             <tr ng-repeat="flight in flightService.flights | filter:filteringBy | orderBy: 'departure'"
                     ng-hide="sdfOnly && flight.origin != 'SDF'">
                 <td>{{ flight.number }}</td>
-                <td>{{ flight.origin }}</td>
+                <td map>{{ flight.origin }}</td>
                 <td>{{ flight.destination }}</td>
                 <td>{{ flight.departure | date:'HH:mm' }}</td>
             </tr>
