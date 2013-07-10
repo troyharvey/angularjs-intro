@@ -1,6 +1,6 @@
-var Flight = function (nr, og, dt, dp) {
-    this.number = nr;
-    this.origin = og;
-    this.destination = dt;
-    this.departure = dp;
+var Flight = function(number, origin, destination, departure) {
+    this.number = number;
+    this.origin = origin;
+    this.destination = destination;
+    this.departure = departure;
 };

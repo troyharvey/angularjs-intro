@@ -1,4 +1,4 @@
-# AngularJS Intro
+# AngularJS: A Fresh Take on Javascript
 
 1. Binding and Expressions
 2. Controllers
@@ -8,6 +8,7 @@
 6. `ng-repeat` Directive
 7. Built-in Filters [orderBy](http://docs.angularjs.org/api/ng.filter:orderBy)
 8. `ng-hide` Directive
+9. Custom attribute Directive
 
 ## Resources
 
