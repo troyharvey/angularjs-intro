@@ -11,8 +11,10 @@
     <div ng-controller="FlightCtrl">
       
       <h1>Flights filtered by {{ filterFlightsBy.origin }}</h1>
-      <input type="text" ng-model="filterFlightsBy.origin" autofocus>
-      <label><input type="checkbox" ng-model="sdfOnly"> SDF </label>
+      <form class="form-inline">
+        <input type="text" ng-model="filterFlightsBy.origin" autofocus>
+        <label class="checkbox"><input type="checkbox" ng-model="sdfOnly"> SDF flights only</label>
+      </form>
       
       <table class="table">
         <tr>

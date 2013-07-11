@@ -2,6 +2,9 @@ var flightApp = angular.module('flightApp', []);
 
 function FlightCtrl($scope, FlightService) {
     $scope.flights = FlightService;
+    $scope.filterFlightsBy = {
+        origin: 'PHX'
+    };
 }
 
 flightApp.directive("mapLink", function($window) {
