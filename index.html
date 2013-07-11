@@ -1,20 +1,20 @@
 <!doctype html>
 <html ng-app="flightApp">
   <head>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <script src="angular.min.js"></script>
     <script src="flight.js"></script>
     <script src="main.js"></script>
   </head>
   <body>
+  <div class="container-fluid">
     <div ng-controller="FlightCtrl">
       
       <h1>Flights filtered by {{ filterFlightsBy.origin }}</h1>
       <input type="text" ng-model="filterFlightsBy.origin" autofocus>
       <label><input type="checkbox" ng-model="sdfOnly"> SDF </label>
-
-      <hr>
       
-      <table border="1">
+      <table class="table">
         <tr>
           <th>Number</th>
           <th>Origin</th>
@@ -30,5 +30,6 @@
         </tr>
       </table>
     </div>
+  </div>
   </body>
 </html>
